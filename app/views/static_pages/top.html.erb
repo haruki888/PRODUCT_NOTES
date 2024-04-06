@@ -1,2 +1,11 @@
-<h1>StaticPages#top</h1>
-<p>Find me in app/views/static_pages/top.html.erb</p>
+<% provide(:title, "Top") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> / product_note</title>
+  </head>
+  <body>
+    <h1>担当商品メモ</h1>
+    <%= link_to "ログイン", login_path, class: "btn btn-lg  btn-outline-dark" %>
+  </body>
+</html>
