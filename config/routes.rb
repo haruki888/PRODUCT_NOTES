@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
-
+  get '/signup', to:'users#new'
   get "up", to: "rails/health#show", as: :rails_health_check
 
   get '/login', to: 'sessions#new'

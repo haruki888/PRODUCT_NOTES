@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.0.3"
 gem "rails", "~> 7.1.3"
+gem 'bootstrap-sass'
 gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
 gem "puma", ">= 5.0"
@@ -11,7 +12,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+#gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 
