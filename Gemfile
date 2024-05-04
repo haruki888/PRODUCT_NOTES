@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.0.3"
 gem "rails", "~> 7.1.3"
+gem "bcrypt"
 gem 'bootstrap-sass'
 gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
