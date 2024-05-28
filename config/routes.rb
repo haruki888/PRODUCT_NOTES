@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
-  get '/signup', to:'users#new'
+  get '/signup', to: 'users#new'
   get "up", to: "rails/health#show", as: :rails_health_check
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  delete '/delete', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
+  resources :users
 end

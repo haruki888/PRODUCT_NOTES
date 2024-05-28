@@ -13,12 +13,12 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 
-#gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
 
-
 group :development, :test do
-  gem "debug", platforms: %i[ mri windows ]
+  gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
+  gem"pry-rails"
 end
 
 group :development do
