@@ -4,11 +4,14 @@
   <%= f.label :name, class: "label-#{yield(:class_text)}" %>
   <%= f.text_field :name, class: "form-control" %>
 
-  <%= f.label :employee_number, class: "label-#{yield(:class_text)}" %>
-  <%= f.number_field :employee_number, class: "form-control" %>
+  <%= f.label :store_code, class: "label-#{yield(:class_text)}" %>
+  <%= f.number_field :store_id, class: "form-control", min: 1, max: 200, step: 1 %>
 
   <%= f.label :password, class: "label-#{yield(:class_text)}" %>
   <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.label :password_confirmation, class: "label-#{yield(:class_text)}" %>
+  <%= f.password_field :password_cofirmation, class: "form-control" %>
 
   <%= f.submit yield(:btn_text), class: "btn btn-info btn-block btn-#{yield(:class_text)}" %>
 <% end %>
