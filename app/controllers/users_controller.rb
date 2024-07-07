@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  #ユーザー登録フォームを表示
   def new
     @user = User.new
   end
@@ -21,6 +22,7 @@ class UsersController < ApplicationController
 
   private
 
+    #許可された属性のみがデータベースに保存されるようにする
     def user_params
       params.require(:user).permit(:name, :store_id, :password, :password_confirmation)
     end

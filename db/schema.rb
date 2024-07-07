@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_05_091915) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_23_142739) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.integer "store_id"
+    t.string "remember_digest"
+    t.index ["name"], name: "index_users_on_name", unique: true
     t.index ["store_id"], name: "index_users_on_store_id", unique: true
   end
 
